@@ -1,0 +1,12 @@
+.recipe-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .recipe-page {
+    padding: 20px 15px;
+  }
+}

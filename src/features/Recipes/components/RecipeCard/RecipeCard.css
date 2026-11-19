@@ -1,0 +1,162 @@
+.recipe-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Bouton retour */
+
+.previous-link {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #e76f35;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.previous-link span:first-child {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.previous-link-text {
+  text-decoration: none;
+}
+
+.previous-link:hover .previous-link-text {
+  text-decoration: underline;
+}
+
+/* Présentation de la recette */
+
+.recipe-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.recipe-card-header h1 {
+  margin: 0 0 10px;
+  color: #222;
+  font-size: 28px;
+}
+
+.recipe-card-details {
+  display: flex;
+  position: relative;
+  top: -20px;
+  gap: 20px;
+}
+
+.recipe-card-header p {
+  margin: 0;
+  color: #555;
+}
+
+.recipe-card-header img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Titres des sections */
+
+.recipe-card h2 {
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e76f35;
+  color: #222;
+  font-size: 22px;
+}
+
+/* Ingrédients */
+
+.recipe-ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.recipe-ingredients li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.recipe-ingredients span:first-child {
+  text-align: left;
+}
+
+.recipe-ingredients span:last-child {
+  color: #e76f35;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Préparation */
+
+.recipe-card-instructions p {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .recipe-card {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .previous-link {
+    position: static;
+    align-self: flex-start;
+  }
+
+  .recipe-card-header h1 {
+    font-size: 24px;
+  }
+
+  .recipe-card-header img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .recipe-card h2 {
+    font-size: 20px;
+  }
+
+  .recipe-ingredients {
+    max-width: 100%;
+  }
+
+  .recipe-ingredients li {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+header {
+    background-image: url(../../assets/header-banner.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+    height: 250px;
+    
+   
+}
+ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 20px;
+}

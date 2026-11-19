@@ -1,0 +1,91 @@
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-modal {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  min-height: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: #eee;
+  color: #222;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #ddd;
+}
+
+.recipe-modal h3 {
+  margin: 15px 0 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.recipe-modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.recipe-modal label {
+  font-weight: 600;
+}
+
+.recipe-modal input[type="date"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.recipe-modal button[type="submit"] {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #e76f35;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recipe-modal button[type="submit"]:hover:not(:disabled) {
+  background: #cf5c25;
+}
+
+.recipe-modal button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.recipe-modal [role="alert"] {
+  color: #c62828;
+  text-align: center;
+}

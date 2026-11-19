@@ -1,0 +1,45 @@
+
+.planning-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.planning-page h1 {
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+}
+
+.planning-page .fc {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.planning-page .fc-button-primary {
+  background: #e76f35;
+  border-color: #e76f35;
+}
+
+.planning-page .fc-button-primary:hover {
+  background: #cf5c25;
+  border-color: #cf5c25;
+}
+
+.planning-page .fc-daygrid-event {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .planning-page {
+    padding: 20px 15px;
+  }
+
+  .planning-page .fc {
+    padding: 10px;
+  }
+}

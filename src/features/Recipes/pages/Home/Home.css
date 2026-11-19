@@ -1,0 +1,80 @@
+.home {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.meal-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.meal-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.meal-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.meal-content h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.meal-content button {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e76f35;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meal-content button:hover {
+  background: #c95620;
+}
+
+@media (max-width: 1100px) {
+  .meals {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .meals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .meals {
+    grid-template-columns: 1fr;
+  }
+}
