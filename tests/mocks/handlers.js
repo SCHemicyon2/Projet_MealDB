@@ -1,4 +1,3 @@
-
 import { http, HttpResponse } from 'msw'
 
 export const categories = [
@@ -33,6 +32,11 @@ export const meals = [
 
 const apiUrl = 'https://www.themealdb.com/api/json/v1/1'
 
+const corsOptions = {
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
+}
 
 export const handlers = [
   http.get(`${apiUrl}/list.php`, () => {
@@ -40,7 +44,7 @@ export const handlers = [
       meals: categories.map(category => ({
         strCategory: category.strCategory
       }))
-    })
+    }, corsOptions)
   }),
 
   http.get(`${apiUrl}/filter.php`, ({ request }) => {
@@ -48,7 +52,7 @@ export const handlers = [
 
     return HttpResponse.json({
       meals: meals.filter(meal => meal.strCategory === category)
-    })
+    }, corsOptions)
   }),
 
   http.get(`${apiUrl}/search.php`, ({ request }) => {
@@ -58,6 +62,6 @@ export const handlers = [
       meals: meals.filter(meal =>
         meal.strMeal.toLowerCase().includes(search.toLowerCase())
       )
-    })
+    }, corsOptions)
   }),
 ]

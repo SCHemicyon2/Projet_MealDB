@@ -4,7 +4,6 @@ import { beforeAll, afterEach, afterAll } from 'vitest'
 import axios from 'axios'
 import { server } from './mocks/node.js'
 
-axios.defaults.adapter = 'fetch'
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
 

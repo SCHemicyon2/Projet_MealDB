@@ -7,9 +7,6 @@ import Home from '../../src/features/Recipes/pages/Home/Home'
 import useRecipe from '../../src/features/Recipes/hooks/useRecipe'
 import axios from 'axios'
 
-vi.mock('../../src/features/Recipes/hooks/useRecipe', () => ({
-  default: vi.fn()
-}))
 
 const beef = {
   idMeal: '1',
@@ -40,11 +37,7 @@ describe('Home : tests intégration', () => {
   beforeEach(() => {
     vi.clearAllMocks()
 
-    vi.mocked(useRecipe).mockReturnValue({
-      recipeData: beef,
-      loading: false,
-      error: null
-    })
+   
   })
 
   test('charge les catégories et affiche les recettes', async () => {
@@ -96,11 +89,4 @@ describe('Home : tests intégration', () => {
       .not.toBeInTheDocument()
   })
 
-  test('MSW intercepte les appels Axios', async () => {
-    const response = await axios.get(
-      'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
-    )
-
-    expect(response.data.meals[0].strCategory).toBe('Beef')
-  })
 })
